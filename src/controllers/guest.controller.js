@@ -10,19 +10,17 @@ class GuestController {
   home = async (req, res) => {
     const products = this.productService.getAllProducts().map(product => ({
       ...product,
-      price: product.price.toFixed(3),
-      slug: product.description.split(' ').join('_').toLowerCase(),
+      slug: product.name.split(' ').join('_').toLowerCase(),
       imageURL: buildImageUrl(product.image)
     }));
 
-    res.render('home', {products});
+    return res.render('home', {products});
   }
 
   getProductBySlug = async (req, res) => {
     const { slug } = req.params
     const product = this.productService.getProductBySlug(slug);
-    console.log(product);
-    res.render('detail', { product })
+    return res.render('detail', { product: { ...product, slug: product.name.split(' ').join('_').toLowerCase() } })
   }
 }
 

@@ -28,20 +28,6 @@ app.use(express.static('assets'));
  
 app.use('/assets', express.static(__dirname + '/assets'));
 
-/*app.get('/', function (req, res) {
-    res.render('home');
-});
-
-app.get('/detail', function (req, res) {
-    res.render('detail', req.query);
-});*/
-
-const mercadopago = require('mercadopago');
-
-mercadopago.configure({
-    access_token: process.env.MERCADOPAGO_ACCESS_TOKEN
-})
-
 app.use('/', routes)
 
 app.listen(port, () => {

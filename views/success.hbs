@@ -1,0 +1,31 @@
+<div class="flex justify-center items-center py-20">
+  <div class="max-w-sm rounded overflow-hidden shadow-lg text-center w-4/12">
+    <div class="p-6 grid gap-6">
+      <div class="flex items-center justify-center">
+        <div class="bg-green-100 text-green-900 w-10 h-10 flex items-center justify-center rounded-full">
+          <i class="fas fa-check"></i>
+        </div>
+      </div>
+      <div class="">
+        <span class="text-gray-700 font-bold text-xl">La compra fue exitosa</span>
+      </div>
+
+      <div>
+        <span class="text-gray-800 text-sm uppercase">Detalles de la compra</span>
+        <ul>
+          <li class="text-md text-gray-600"><strong class="text-gray-600 font-medium mr-1">payment_type:</strong> {{payment_type}}</li>
+          <li class="text-md text-gray-600"><strong class="text-gray-600 font-medium mr-1">external_reference:</strong> {{external_reference}}</li>
+          <li class="text-md text-gray-600"><strong class="text-gray-600 font-medium mr-1">payment_id:</strong> {{collection_id}}</li>
+        </ul>
+      </div>
+
+      <div>
+        <a href="/" class="w-full bg-indigo-500 text-white py-2 px-4 rounded text-xs font-semibold">IR A LA TIENDA</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{#section 'script'}}
+<script src="https://www.mercadopago.com/v2/security.js" view="home"></script>
+{{/section}}
