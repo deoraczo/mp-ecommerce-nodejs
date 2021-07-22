@@ -1,0 +1,37 @@
+<div class="py-3">
+  <h1 class="text-gray-700 font-bold text-xl uppercase">Smartphones</h1>
+</div>
+
+<div class="grid gap-6 grid-cols-12">
+  <aside class="col-span-3">
+    <h2 class="text-gray-600 font-bold text-md mt-1">Marca</h2>
+    <ul class="text-gray-600 py-1">
+      <li class="py-1">
+        <a href="#">Apple</a>
+      </li>
+      <li class="py-1">
+        <a href="#">LG</a>
+      </li>
+      <li class="py-1">
+        <a href="#">Motorola</a>
+      </li>
+      <li class="py-1">
+        <a href="#">Samsung</a>
+      </li>
+      <li class="py-1">
+        <a href="#">Sony</a>
+      </li>
+      <li class="py-1">
+        <a href="#">More</a>
+      </li>
+    </ul>
+  </aside>
+
+  <div class="col-span-9">
+    <div class="grid gap-6 grid-cols-12">
+      {{#each products as |product|}}
+        {{> product product=product }}
+      {{/each}}
+    </div>    
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="py-3">
+  <h1 class="text-gray-700 font-bold text-xl uppercase">Smartphones</h1>
+</div>
+
+<div class="flex mt-6">
+    <div>
+        <img src="/assets/images/phones/{{product.image}}" style="height: 250px;" alt="">
+    </div>
+    <div class="flex items-center justify-center p-4 flex-col">
+        <h2 class="text-gray-600 font-bold text-md">{{product.description}}</h2>
+        
+        <div class=".cho-container">
+
+        </div>
+        
+
+    </div>
+</div>
+
+{{#section 'script'}}
+
+<script type="application/javascript">
+    window.addEventListener('load', () => {
+        const mp = new MercadoPago('APP_USR-babb2f5d-05d4-4c5e-95ea-513b594d3fbf', {
+            locale: 'es-PE'
+        });
+
+        mp.checkout({
+            preference: {
+                id: 'YOUR_PREFERENCE_ID'
+            },
+            render: {
+                    container: '.cho-container', // Indica dónde se mostrará el botón de pago
+                    label: 'Pagar', // Cambia el texto del botón de pago (opcional)
+            }
+        });
+    });  
+
+
+</script>
+
+{{/section}}

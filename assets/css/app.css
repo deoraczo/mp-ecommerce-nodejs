@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+:root {
+  --header-height: 250px;
+  --bg-color: #fbfbfe;
+  --footer-height: 60px;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.header_wrapper, .banner {
+  height: var(--header-height);
+}
+
+.banner {
+  width: 100%;
+}
+
+.footer_wrapper {
+  height: var(--footer-height);
+}
