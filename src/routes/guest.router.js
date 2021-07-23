@@ -7,8 +7,8 @@ const guestController = new GuestController(productService);
 const guestRouter = Router();
 
 
-guestRouter.get('/', guestController.home);
 guestRouter.get('/:slug', guestController.getProductBySlug);
+guestRouter.get('/', guestController.home);
 
 module.exports = guestRouter;
 

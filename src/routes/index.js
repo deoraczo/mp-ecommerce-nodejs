@@ -19,8 +19,8 @@ router.post('/hook', (req, res) => {
 
   return res.status(200);
 })
+router.use('/', guestRouter);
 router.use('/payments', paymentRouter);
 router.use('/checkout', checkoutRouter);
-router.use('/', guestRouter);
 
 module.exports = router;

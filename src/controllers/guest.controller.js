@@ -15,6 +15,7 @@ class GuestController {
     }));
 
     return res.render('home', {products});
+    console.log('pado');
   }
 
   getProductBySlug = async (req, res) => {
