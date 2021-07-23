@@ -58,6 +58,7 @@ class MercadoPagoService {
         failure: `${process.env.APP_URL}/payments/failure`,
         pending: `${process.env.APP_URL}/payments/pending`,
       },
+      notification_url: `${process.env.APP_URL}/hook`,
       external_reference: 'deoraczo@gmail.com',
       auto_return: 'approved'
     })

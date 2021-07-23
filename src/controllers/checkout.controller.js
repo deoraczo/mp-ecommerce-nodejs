@@ -6,8 +6,13 @@ class ChekoutController {
   createPreferences = async (req, res, next) => {
     const { slug } = req.params
     const product = this.productService.getProductBySlug(slug);
-    const preferences = await this.mercadoPagoService.createPreferences(product, 1);
-    return res.redirect(preferences.init_point);
+    try {
+      const preferences = await this.mercadoPagoService.createPreferences(product, 1);
+      console.log(preferences, "response preferences");
+      return res.redirect(preferences.init_point);
+    } catch (error) {
+      return res.redirect('/');
+    }
   }
 }
 
