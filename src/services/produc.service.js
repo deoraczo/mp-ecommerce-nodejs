@@ -2,7 +2,7 @@ const PRODUCTS = [
   {
     id: 1,
     name: 'Samsung Galaxy S9',
-    price: 1526,
+    price: 1500,
     image: 'samsung-galaxy-s9-xxl.jpg'
   },
   {
