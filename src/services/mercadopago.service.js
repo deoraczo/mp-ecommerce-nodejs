@@ -42,7 +42,7 @@ class MercadoPagoService {
       payment_methods: {
         excluded_payment_methods: [
           {
-            id: 'Diners'
+            id: 'diners'
           }
         ],
         excluded_payment_types: [
